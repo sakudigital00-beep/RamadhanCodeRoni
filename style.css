@@ -86,3 +86,43 @@ body {
         font-size: 24px;
     }
 }
+.page-section {
+    display: none;
+}
+
+.page-section.active {
+    display: block;
+}
+
+.nav-btn.active-tab {
+    background-color: #16a34a !important;
+    color: white !important;
+}
+
+.flex.flex-col.items-center.justify-center {
+    position: relative;
+}
+
+.notification {
+    position: absolute;
+    top: 20px; /* tetap di dalam lingkaran */
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background-color: #e6f511;
+    color: rgb(24, 4, 4);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 50;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
